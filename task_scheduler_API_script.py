@@ -24,11 +24,11 @@ all_citations.to_csv('citations.csv')
 # read in csv files from previous downloads
 # set arrest # as index
 # to be able to cross reference against most recent download
-arrests = pd.read_csv('arrests.csv ', index_col='Arrests #')
+arrests = pd.read_csv('arrests.csv ', index_col='Arrest #')
 
 # download most recent arrests
 arrests_recent = pd.read_csv('https://opendatafiles.blob.core.windows.net/odfiles/spd_PDArrests.csv', 
-                               index_col='Arrests #',
+                               index_col='Arrest #',
                                low_memory=False)
 # combine citations
 all_arrests = pd.concat([arrests,
